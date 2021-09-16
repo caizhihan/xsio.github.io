@@ -13,7 +13,7 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <title>场景4</title>
+    <title>测试动态渠道活码</title>
     <style>
       .form-container {
         max-width: 600px;
@@ -94,19 +94,16 @@
         </form>
       </div>
       <div class="result-container">
-        <p class="summit-desc h4 lead">
-          信息提交成功！稍后我们将联系您确认需求，并提出初步方案，帮助您更高效地体验我们的产品。
-        </p>
         <div class="qrcode-container">
-          <div class="qrcode-desc">需要立即咨询/体验，请扫码添加客服微信</div>
-          <div id="_cl_qrcode" style="width: 200px"></div>
+          <div class="qrcode-desc">需要立即咨询/体验，请扫码添加客服企业微信</div>
+          <div id="_cl_wework_qrcode" style="width: 200px"></div>
         </div>
       </div>
     </div>
 
     <script>
       $.get(
-        "https://host.huiju.cool/formdata/get/44e238b5fad3436b9752448683cf7b32"
+        "https://host-sandbox.huiju.cool/formdata/get/8c1f664c97354aa8a4343818844ac6bd"
       ).done(function (res) {
         $("form").submit(function (e) {
           e.preventDefault();
@@ -120,11 +117,10 @@
             res.token;
           console.log("resData is", resData);
           $.post(
-            "https://host.huiju.cool/form/44e238b5fad3436b9752448683cf7b32",
+            "https://host-sandbox.huiju.cool/form/8c1f664c97354aa8a4343818844ac6bd",
             resData,
             function (data, status) {
-              $(".form-container").fadeOut();
-              $(".result-container").fadeIn();
+              alert('提交成功');
             }
           );
         });
@@ -132,47 +128,10 @@
     </script>
 
     <script>
-      (function (c, e, f, b) {
-        function a(j) {
-          var h = j + "=";
-          var g = document.cookie.split(";");
-          for (var k = 0; k < g.length; k++) {
-            var l = g[k];
-            while (l.charAt(0) == " ") {
-              l = l.substring(1);
-            }
-            if (l.indexOf(h) == 0) {
-              return l.substring(h.length, l.length);
-            }
-          }
-          return "";
-        }
-        function d() {
-          var h = a("c__utma");
-          var g = document.createElement("img");
-          setTimeout(function () {
-            g.setAttribute("style", "width: 100%");
-            g.setAttribute(
-              "src",
-              c + "?uuid=" + e + "&tid=" + f + "&utma=" + h
-            );
-            document.getElementById(b).appendChild(g);
-          }, 3000);
-        }
-        if (typeof _cl_tracker != "undefined" && _cl_tracker.ready) {
-          _cl_tracker.ready(d);
-        } else {
-          setTimeout(d, 1000);
-        }
-      })(
-        "//host.huiju.cool/qrcode/binding",
-        "8ad3ad381ce84efeaf1975d0973b110d",
-        "1409254608",
-        "_cl_qrcode"
-      );
+      (function(c,e,b){function d(){var h=function(j){for(var h=j+"=",g=document.cookie.split(";"),k=0;k<g.length;k++){for(var l=g[k];" "==l.charAt(0);)l=l.substring(1);if(0==l.indexOf(h))return l.substring(h.length,l.length)}return""}("c__utma"),g=document.createElement("img"),w=function(){let cl=[];return location.search.slice(1).split("&").forEach(function(a){a=a.split("=");0===a[0].indexOf("cl_")&&a[1]&&cl.push(a[0]+"="+a[1])}),0<cl.length?"&"+cl.join("&"):""}();setTimeout(function(){g.setAttribute("style","width: 100%"),g.setAttribute("src",c+"?uuid="+e+"&utma="+h+w),document.getElementById(b).appendChild(g)},3e3)}"undefined"!=typeof _cl_tracker&&_cl_tracker.ready?_cl_tracker.ready(d):setTimeout(d,1e3)})("//a-sandbox.huiju.cool/e/extwechatcorp/pgw/livecode/binding","4caK","_cl_wework_qrcode");
     </script>
   </body>
-  <script src="//cbe.huiju.cool/cbe/collect?tid=1409254608&at=0&h=web"></script>
+  <script src="//cbe-sandbox.huiju.cool/cbe/collect?tid=1238467299&at=0&h=web"></script>
   <script>
     clab_tracker.ready(function () {
       this.push({ pageType: "web" });
