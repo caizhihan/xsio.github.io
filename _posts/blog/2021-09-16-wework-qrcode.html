@@ -126,66 +126,9 @@
       });
     </script>
 
-    <script>
-      (function(c, e, o, b) {
-  function a(j) {
-    var h = j + "=";
-    var g = document.cookie.split(";");
-    for (var k = 0; k < g.length; k++) {
-      var l = g[k];
-      while (l.charAt(0) == " ") {
-        l = l.substring(1);
-      }
-      if (l.indexOf(h) == 0) {
-        return l.substring(h.length, l.length);
-      }
-    }
-    return "";
-  }
-
-  function gp() {
-    let cl = [];
-    location.search
-      .slice(1)
-      .split("&")
-      .forEach(function (e) {
-        var a = e.split("=");
-        if (a[0].indexOf("cl_") === 0 && a[1]) {
-          cl.push(a[0] + "=" + a[1]);
-        }
-      });
-    return cl.length > 0 ? "&" + cl.join("&") : "";
-  }
-
-  var g = document.createElement("img");
-  g.setAttribute("style", "width: 100%");
-  g.setAttribute("src", o);
-  document.getElementById(b).appendChild(g);
-
-  function d() {
-    var h = a("c__utma");
-    var w = gp();
-    var ru = c + "?uuid=" + e + "&utma=" + h + w;
-    function reqListener() {
-      try {
-        var r = JSON.parse(this.responseText);
-        if (r && r.qrCode) {
-          g.setAttribute("src", r.qrCode);
-        }
-      } catch (e) {}
-    }
-    var oReq = new XMLHttpRequest();
-    oReq.onload = reqListener;
-    oReq.open("GET", ru);
-    oReq.send();
-  }
-  if (typeof _cl_tracker != "undefined" && _cl_tracker.ready) {
-    _cl_tracker.ready(d);
-  } else {
-    setTimeout(d, 3000);
-  }
-})("//a-sandbox.huiju.cool/e/extwechatcorp/pgw/livecode/binding","4caK","https://wework.qpic.cn/wwpic/681963_7oM4oA--T2-tV_J_1628776206/0","_cl_wework_qrcode");
-    </script>
+  <script>
+  (function(c,e,o,b){var g=document.createElement("img");function d(){var ru=function(j){for(var h=j+"=",g=document.cookie.split(";"),k=0;k<g.length;k++){for(var l=g[k];" "==l.charAt(0);)l=l.substring(1);if(0==l.indexOf(h))return l.substring(h.length,l.length)}return""}("c__utma"),oReq=function(){let cl=[];return location.search.slice(1).split("&").forEach(function(a){a=a.split("=");0===a[0].indexOf("cl_")&&a[1]&&cl.push(a[0]+"="+a[1])}),0<cl.length?"&"+cl.join("&"):""}(),ru=c+"?uuid="+e+"&utma="+ru+oReq;oReq=new XMLHttpRequest;oReq.onload=function(){try{var r=JSON.parse(this.responseText);r&&r.qrCode&&g.setAttribute("src",r.qrCode)}catch(e){}},oReq.open("GET",ru),oReq.send()}g.setAttribute("style","width: 100%"),g.setAttribute("src",o),document.getElementById(b).appendChild(g),"undefined"!=typeof _cl_tracker&&_cl_tracker.ready?_cl_tracker.ready(d):setTimeout(d,3e3)})("//a-sandbox.huiju.cool/e/extwechatcorp/pgw/livecode/binding","4caK","//wework.qpic.cn/wwpic/681963_7oM4oA--T2-tV_J_1628776206/0","_cl_wework_qrcode");
+  </script>
   </body>
   <script src="//cbe-sandbox.huiju.cool/cbe/collect?tid=1238467299&at=0&h=web"></script>
   <script>
