@@ -55,7 +55,7 @@
         <h4 style="text-align: center">表单提交</h4>
         <form
           data-cl-attached="false"
-          data-cl-id="44e238b5fad3436b9752448683cf7b32"
+          data-cl-id="56d63170ed6c4ff9bcd2f584f6d50acd"
         >
           <div class="form-group">
             <label>姓名</label>
@@ -102,7 +102,7 @@
 
     <script>
       $.get(
-        "https://host-sandbox.huiju.cool/formdata/get/8c1f664c97354aa8a4343818844ac6bd"
+        "https://host-test.huiju.cool/formdata/get/56d63170ed6c4ff9bcd2f584f6d50acd"
       ).done(function (res) {
         $("form").submit(function (e) {
           e.preventDefault();
@@ -116,7 +116,7 @@
             res.token;
           console.log("resData is", resData);
           $.post(
-            "https://host-sandbox.huiju.cool/form/8c1f664c97354aa8a4343818844ac6bd",
+            "https://host-test.huiju.cool/form/56d63170ed6c4ff9bcd2f584f6d50acd",
             resData,
             function (data, status) {
               alert('提交成功');
@@ -127,13 +127,13 @@
     </script>
 
   <script>
-  (function(c,e,o,b){var g=document.createElement("img");function d(){var ru=function(j){for(var h=j+"=",g=document.cookie.split(";"),k=0;k<g.length;k++){for(var l=g[k];" "==l.charAt(0);)l=l.substring(1);if(0==l.indexOf(h))return l.substring(h.length,l.length)}return""}("c__utma"),oReq=function(){let cl=[];return location.search.slice(1).split("&").forEach(function(a){a=a.split("=");0===a[0].indexOf("cl_")&&a[1]&&cl.push(a[0]+"="+a[1])}),0<cl.length?"&"+cl.join("&"):""}(),ru=c+"?uuid="+e+"&utma="+ru+oReq;oReq=new XMLHttpRequest;oReq.onload=function(){try{var r=JSON.parse(this.responseText);r&&r.qrCode&&g.setAttribute("src",r.qrCode)}catch(e){}},oReq.open("GET",ru),oReq.send()}g.setAttribute("style","width: 100%"),g.setAttribute("src",o),document.getElementById(b).appendChild(g),"undefined"!=typeof _cl_tracker&&_cl_tracker.ready?_cl_tracker.ready(d):setTimeout(d,3e3)})("//a-sandbox.huiju.cool/e/extwechatcorp/pgw/livecode/binding","4caK","//wework.qpic.cn/wwpic/681963_7oM4oA--T2-tV_J_1628776206/0","_cl_wework_qrcode");
+  (function(c,e,o,b){var g=document.createElement("img");function d(){var ru=function(j){for(var h=j+"=",g=document.cookie.split(";"),k=0;k<g.length;k++){for(var l=g[k];" "==l.charAt(0);)l=l.substring(1);if(0==l.indexOf(h))return l.substring(h.length,l.length)}return""}("c__utma"),oReq=function(){let cl=[];return location.search.slice(1).split("&").forEach(function(a){a=a.split("=");0===a[0].indexOf("cl_")&&a[1]&&cl.push(a[0]+"="+a[1])}),0<cl.length?"&"+cl.join("&"):""}(),ru=c+"?uuid="+e+"&utma="+ru+oReq;oReq=new XMLHttpRequest;oReq.onload=function(){try{var r=JSON.parse(this.responseText);r&&r.qrCode&&g.setAttribute("src",r.qrCode)}catch(e){}},oReq.open("GET",ru),oReq.send()}g.setAttribute("style","width: 100%"),g.setAttribute("src",o),document.getElementById(b).appendChild(g),"undefined"!=typeof _cl_tracker&&_cl_tracker.ready?_cl_tracker.ready(d):setTimeout(d,3e3)})("//a-test.huiju.cool/e/extwechatcorp/pgw/livecode/binding","4cc4","//wework.qpic.cn/wwpic/420094_3UhQbTnQT_aTB-h_1631947153/0","_cl_wework_qrcode");
   </script>
   </body>
-  <script src="//cbe-sandbox.huiju.cool/cbe/collect?tid=1238467299&at=0&h=web"></script>
+  <script src="//cbe-test.huiju.cool/cbe/collect?tid=393279833&at=0&h=web"></script>
   <script>
-    clab_tracker.ready(function () {
-      this.push({ pageType: "web" });
+    clab_tracker.ready(function(){
+      this.push({"pageType":"web"});
       this.track("open_page", {});
     });
   </script>
