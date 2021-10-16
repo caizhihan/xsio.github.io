@@ -12,9 +12,13 @@
 <body>
     <script src="//libs.baidu.com/jquery/2.0.0/jquery.js"></script>
    
-    <form data-cl-attached="false" data-cl-id="cf6cd2a4c8ba413daa87f8bb2f0df22e">
+    <form data-cl-attached="false" data-cl-id="76390197ba364211828c5027e8d5eb34">
         姓名:<input type="String" name="name"/>
         手机号:<input type="String" name="mobile" id="clMobileField">
+        自定义文本1:<input type="Text" name="attr6"/>
+        自定义数值1:<input type="Number" name="attr2"/>
+        自定义日期1:<input type="Date" name="attr3"/>
+        自定义时间1:<input type="DateTime" name="attr4"/>
         cltoken:<input type="text" name="cltoken"/>
         <input type="submit" name="" value="提交"/>
     </form>
@@ -29,18 +33,18 @@
         var utmaVal = document.getElementsByName("cl_context")[0].value
         var resData = data.split("&cl_context")[0] + "&" + utmaVal
         console.log("resData is",resData)
-        $.post("//hostv1.convertwork.cn/page/cf6cd2a4c8ba413daa87f8bb2f0df22e",resData,
+        $.post("//hostv1.convertwork.cn/page/76390197ba364211828c5027e8d5eb34",resData,
           function(data,status){ alert("数据: \n" + data + "\n状态: " + status);
           })
       });
     </script>
 </body>
-<script src="//av1.convertwork.cn/cbe/collect?tid=1944539638&at=0&h=web"> </script>
+<script src="https://a-lts.convertwork.cn/cbe/collect?tid=1238467299&at=0&h=web"> </script>
 
 <script>
         clab_tracker.ready(function(){
          this.push({"pageType":"web"});
-	 this.push({"tag":"高手"});
+	 this.push({"tag":"新环境"});
          this.track("open_page", {});
 
         });
