@@ -33,7 +33,7 @@
         var utmaVal = document.getElementsByName("cl_context")[0].value
         var resData = data.split("&cl_context")[0] + "&" + utmaVal
         console.log("resData is",resData)
-        $.post("//hostv1.convertwork.cn/page/76390197ba364211828c5027e8d5eb34",resData,
+        $.post("//a-lts.convertwork.cn/page/76390197ba364211828c5027e8d5eb34",resData,
           function(data,status){ alert("数据: \n" + data + "\n状态: " + status);
           })
       });
