@@ -83,12 +83,12 @@
               c + "?uuid=" + e + "&tid=" + f + "&utma=" + h
             );
             document.getElementById(b).appendChild(g);
-          }, 3000);
+          }, 1200);
         }
         if (typeof _cl_tracker != "undefined" && _cl_tracker.ready) {
           _cl_tracker.ready(d);
         } else {
-          setTimeout(d, 1000);
+          setTimeout(d, 600);
         }
       })(
         "//host.huiju.cool/qrcode/binding",
