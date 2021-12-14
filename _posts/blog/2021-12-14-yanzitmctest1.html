@@ -29,7 +29,7 @@
         var utmaVal = document.getElementsByName("cl_context")[0].value
         var resData = data.split("&cl_context")[0] + "&" + utmaVal
         console.log("resData is",resData)
-        $.post("//ma-share.tmc-qa.tencent.com/h/page/1238467299/c3d2c89e0e2249da99fe73a5ff2ab34f",resData,
+        $.post("//ma-share.tmc-qa.tencent.com/h/page/e9ba711a20cb43aa996080f755c81004",resData,
 	       
           function(data,status){ alert("数据: \n" + data + "\n状态: " + status);
           })
