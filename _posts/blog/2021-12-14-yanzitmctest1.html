@@ -12,7 +12,7 @@
 <body>
     <script src="//libs.baidu.com/jquery/2.0.0/jquery.js"></script>
    
-    <form data-cl-attached="false" data-cl-id="e9ba711a20cb43aa996080f755c81004">
+    <form data-cl-attached="false" data-cl-id="cfafa32d047e4f24a47786ecccbfb192">
         姓名:<input type="String" name="name"/>
         手机号:<input type="String" name="mobile" id="clMobileField">
         cltoken:<input type="text" name="cltoken"/>
@@ -29,14 +29,15 @@
         var utmaVal = document.getElementsByName("cl_context")[0].value
         var resData = data.split("&cl_context")[0] + "&" + utmaVal
         console.log("resData is",resData)
-        $.post("//ma-share.tmc-qa.tencent.com/h/page/e9ba711a20cb43aa996080f755c81004",resData,
+        $.post("//ma-share.tmc-qa.tencent.com/h/page/cfafa32d047e4f24a47786ecccbfb192",resData,
 	       
           function(data,status){ alert("数据: \n" + data + "\n状态: " + status);
           })
       });
     </script>
 </body>
-      <script src="//av1.convertwork.cn/cbe/collect?tid=1767803776&at=0&h=web"> </script>
+      <script src="https://ma-share.tmc-qa.tencent.com/cbe/collect?tid=1238467299&at=0&h=web"> </script>
+
 <script>
         clab_tracker.ready(function(){
          this.push({"pageType":"web"});
