@@ -15,12 +15,6 @@
     <form data-cl-attached="false" data-cl-id="e9ba711a20cb43aa996080f755c81004">
         姓名:<input type="String" name="name"/>
         手机号:<input type="String" name="mobile" id="clMobileField">
-        文本:<input type="Text" name="attr1"/>
-        数值:<input type="Number" name="attr2"/>
-        日期:<input type="Date" name="attr3"/>
-	时间:<input type="DateTime" name="attr4"/>
-	生日:<input type="Date" name="birthday"/>
-	公司员工数:<input type="Number" name="employeeNumber"/>
         cltoken:<input type="text" name="cltoken"/>
         <input type="submit" name="" value="提交"/>
     </form> 
@@ -35,7 +29,8 @@
         var utmaVal = document.getElementsByName("cl_context")[0].value
         var resData = data.split("&cl_context")[0] + "&" + utmaVal
         console.log("resData is",resData)
-        $.post("//av1.convertwork.cn/h/page/e9ba711a20cb43aa996080f755c81004",resData,
+        $.post("//ma-share.tmc-qa.tencent.com/h/page/1238467299/c3d2c89e0e2249da99fe73a5ff2ab34f",resData,
+	       
           function(data,status){ alert("数据: \n" + data + "\n状态: " + status);
           })
       });
