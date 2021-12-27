@@ -1,0 +1,54 @@
+<!-- v1su2环境  外部网站提交表单验证码测试 31租户 -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="//libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+   
+    <form data-cl-attached="false" data-cl-id="d192f786cc36438fbf670d12d5899cb5">
+        姓名:<input type="String" name="name"/>
+        手机号:<input type="String" name="mobile" id="clMobileField">
+        cltoken:<input type="text" name="cltoken"/>
+        <input type="submit" name="" value="提交"/>
+    </form> 
+    <script>
+      $('form').submit(function(e) {
+        e.preventDefault();
+        var data = $(this).serialize()
+        var utmaVal = document.getElementsByName("cl_context")[0].value
+        var resData = data.split("&cl_context")[0] + "&" + utmaVal
+        console.log("resData is",resData)
+        $.post("//av1.convertwork.cn/h/page/e9ba711a20cb43aa996080f755c81004",resData,
+          function(data,status){ alert("数据: \n" + data + "\n状态: " + status);
+          })
+      });
+    </script>
+</body>
+    <script src="https://av1.convertwork.cn/cbe/collect?tid=1944539638&at=0&h=web"></script>
+      <script>
+        clab_tracker.ready(function(){
+          this.push({"pageType":"web"});
+          this.track("open_page", {});
+        });
+       
+      </script>
+      <script src="https://ssl.captcha.qq.com/TCaptcha.js"> </script>
+      <script src="https://av1.convertwork.cn/h/assets/library/md5.js"> </script>
+      <script src="https://av1.convertwork.cn/h/js/cl_tencentCloudCaptch.min.js"> </script>
+      new cl_captcha({
+         hostUrl:"av1.convertwork.cn",//hosting 服务的公网访问地址
+         resouceType: "d192f786cc36438fbf670d12d5899cb5",//资源类型 表单或者微页面
+         resourceUuid: "d192f786cc36438fbf670d12d5899cb5",//表单或者微页面的uuid
+         signature: "【欣兆阳】",//短信签名
+         codeElement: "clGetCodeBtn",//验证码按钮id
+         phoneElement: "clMobileField",//手机输入框id
+         isHost:true})
+   
+</html>
