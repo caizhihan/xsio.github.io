@@ -1,0 +1,52 @@
+<!-- master环境  外部网站提交表单 26租户（含四个自定义属性） 2022-01-17日-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="//libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+   
+    <form data-cl-attached="false" data-cl-id="71a7a3b6fa304473b3725036bafd14bf">
+        姓名:<input type="String" name="name"/>
+        手机号:<input type="String" name="mobile" id="clMobileField">
+        SU2文本-误删:<input type="String" name="name"/>
+        SU2数值-误删:<input type="Integer" name="name"/>
+        SU2日期-误删:<input type="DateTime" name="name"/>
+        SU2时间-误删:<input type="datetime-local" name="name"/>
+        cltoken:<input type="text" name="cltoken"/>
+        <input type="submit" name="" value="提交"/>
+    </form>
+	<div id="_cl_qrcode" style="width:200px"></div>
+          <script>
+            (function(c,e,f,b){function a(j){var h=j+"=";var g=document.cookie.split(";");for(var k=0;k<g.length;k++){var l=g[k];while(l.charAt(0)==" "){l=l.substring(1)}if(l.indexOf(h)==0){return l.substring(h.length,l.length)}}return""}function d(){var h=a("c__utma");var g=document.createElement("img"); setTimeout(function(){g.setAttribute("style","width: 100%");g.setAttribute("src",c+"?uuid="+e+"&tid="+f+"&utma="+h);document.getElementById(b).appendChild(g)},3000) }if(typeof _cl_tracker != "undefined" && _cl_tracker.ready){_cl_tracker.ready(d)}else{setTimeout(d,1000)}})("//av1.convertwork.cn/h/qrcode/binding","6998c32f68644cf2883e24a72f791625","1944539638","_cl_qrcode");
+          </script>
+	 <script>
+      $('form').submit(function(e) {
+        e.preventDefault();
+        var data = $(this).serialize()
+        var utmaVal = document.getElementsByName("cl_context")[0].value
+        var resData = data.split("&cl_context")[0] + "&" + utmaVal
+        console.log("resData is",resData)
+        $.post("//hostv1.convertwork.cn/page/cf6cd2a4c8ba413daa87f8bb2f0df22e",resData,
+          function(data,status){ alert("数据: \n" + data + "\n状态: " + status);
+          })
+      });
+    </script>
+</body>
+<script src="//a.dmhub.cn/cbe/collect?tid=1734229266&at=0&h=web"></script>
+
+<script>
+        clab_tracker.ready(function(){
+         this.push({"pageType":"web"});
+	 this.push({"tag":"高手"});
+         this.track("open_page", {});
+
+        });
+   </script>
+</html>
