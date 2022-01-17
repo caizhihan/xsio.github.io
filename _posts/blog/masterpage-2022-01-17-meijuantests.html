@@ -1,5 +1,4 @@
 <!-- master环境  外部网站提交表单 26租户（含四个自定义属性） 2022-01-17日-->
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,7 +11,7 @@
 <body>
     <script src="https://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
    
-    <form data-cl-attached="false" data-cl-id="71a7a3b6fa304473b3725036bafd14bf">
+    <form data-cl-attached="false" data-cl-id="6d4db51f7209469ba2e7baf19a877844">
         姓名:<input type="text" name="name"/>
         手机号:<input type="tel" name="mobile" id="clMobileField">
 	cltoken:<input type="text" name="cltoken"/>
@@ -26,15 +25,14 @@
         var utmaVal = document.getElementsByName("cl_context")[0].value
         var resData = data.split("&cl_context")[0] + "&" + utmaVal
         console.log("resData is",resData)
-        $.post("https://host.dmhub.cn/page/71a7a3b6fa304473b3725036bafd14bf",resData,
+        $.post("https://host.dmhub.cn/page/6d4db51f7209469ba2e7baf19a877844",resData,
           function(data,status){
             alert("数据: \n" + data + "\n状态: " + status);
           })
       });
     </script>
 </body>
-  
-<script src="//a.dmhub.cn/cbe/collect?tid=1734229266&at=0&h=web"></script>
+  <script src="//cbe.dmhub.cn/cbe/collect?tid=1734229266&at=0&h=web"></script>
       <script>
         clab_tracker.ready(function(){
           this.push({"pageType":"web"});
@@ -42,5 +40,4 @@
         });
        
       </script>
-
 </html>
