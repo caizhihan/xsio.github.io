@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>jianyu360</title>
+    <style>
+      .form-container {
+        max-width: 600px;
+        margin: 20px auto;
+      }
+      .form-submit {
+        width: 250px;
+      }
+      .result-container {
+        max-width: 700px;
+        margin: 100px auto;
+      }
+      .qrcode-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+      }
+      .summit-desc {
+        line-height: 2;
+      }
+    </style>
+    <script src="https://cdn-common.jianyu360.com/cdn/lib/systemjs/6.8.3/dist/extras/amd.min.js"></script>
+    <script>
+      function addTrackScript(callback) {
+        var sdk = document.createElement("script");
+        sdk.onload = function () {
+          console.log("SDK加载成功了");
+          var setting = document.createElement("script");
+          document.getElementsByTagName("head")[0].appendChild(setting);
+          callback();
+        };
+
+        sdk.setAttribute(
+          "src",
+          "https://cbe-test.huiju.cool/cbe/collect?tid=1238467299&at=0&h=web"
+        );
+        document.getElementsByTagName("head")[0].appendChild(sdk);
+      }
+
+      addTrackScript(function () {
+        clab_tracker.ready(function () {
+          console.log("@@@@ ready");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="result-container">
+        <p class="summit-desc h4 lead">
+          稍后我们将联系您确认需求，并提出初步方案，帮助您更高效地体验我们的产品。
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
