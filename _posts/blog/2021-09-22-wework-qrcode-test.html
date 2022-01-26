@@ -105,10 +105,10 @@
     <script>
       $("form").on("submit", function (e) {
         e.preventDefault();
+        var data = $(this).serialize();
         $.get(
           "https://host-test.huiju.cool/formdata/get/56d63170ed6c4ff9bcd2f584f6d50acd"
         ).done(function (res) {
-          var data = $(this).serialize();
           var utmaVal = document.getElementsByName("cl_context")[0].value;
           var reqData =
             data.split("&cl_context")[0] +
