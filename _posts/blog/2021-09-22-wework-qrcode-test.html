@@ -94,46 +94,99 @@
       </div>
       <div class="result-container">
         <div class="qrcode-container">
-          <div class="qrcode-desc">需要立即咨询/体验，请扫码添加客服企业微信</div>
+          <div class="qrcode-desc">
+            需要立即咨询/体验，请扫码添加客服企业微信
+          </div>
           <div id="_cl_wework_qrcode" style="width: 200px"></div>
         </div>
       </div>
     </div>
 
     <script>
-      $.get(
-        "https://host-test.huiju.cool/formdata/get/56d63170ed6c4ff9bcd2f584f6d50acd"
-      ).done(function (res) {
-        $("form").submit(function (e) {
-          e.preventDefault();
+      $("form").on("submit", function (e) {
+        e.preventDefault();
+        $.get(
+          "https://host-test.huiju.cool/formdata/get/56d63170ed6c4ff9bcd2f584f6d50acd"
+        ).done(function (res) {
           var data = $(this).serialize();
           var utmaVal = document.getElementsByName("cl_context")[0].value;
-          var resData =
+          var reqData =
             data.split("&cl_context")[0] +
             "&" +
             utmaVal +
             "&cltoken=" +
             res.token;
-          console.log("resData is", resData);
+          console.log("reqData is", reqData);
           $.post(
             "https://host-test.huiju.cool/form/56d63170ed6c4ff9bcd2f584f6d50acd",
-            resData,
+            reqData,
             function (data, status) {
-              alert('提交成功');
+              alert("提交成功");
             }
           );
         });
       });
     </script>
 
-  <script>
-  (function(c,e,o,b){var g=document.createElement("img");function d(){var ru=function(j){for(var h=j+"=",g=document.cookie.split(";"),k=0;k<g.length;k++){for(var l=g[k];" "==l.charAt(0);)l=l.substring(1);if(0==l.indexOf(h))return l.substring(h.length,l.length)}return""}("c__utma"),oReq=function(){let cl=[];return location.search.slice(1).split("&").forEach(function(a){a=a.split("=");0===a[0].indexOf("cl_")&&a[1]&&cl.push(a[0]+"="+a[1])}),0<cl.length?"&"+cl.join("&"):""}(),ru=c+"?uuid="+e+"&utma="+ru+oReq;oReq=new XMLHttpRequest;oReq.onload=function(){try{var r=JSON.parse(this.responseText);r&&r.qrCode&&g.setAttribute("src",r.qrCode)}catch(e){}},oReq.open("GET",ru),oReq.send()}g.setAttribute("style","width: 100%"),g.setAttribute("src",o),document.getElementById(b).appendChild(g),"undefined"!=typeof _cl_tracker&&_cl_tracker.ready?_cl_tracker.ready(d):setTimeout(d,3e3)})("//a-test.huiju.cool/e/extwechatcorp/pgw/livecode/binding","4cc4","//wework.qpic.cn/wwpic/420094_3UhQbTnQT_aTB-h_1631947153/0","_cl_wework_qrcode");
-  </script>
+    <script>
+      (function (c, e, o, b) {
+        var g = document.createElement("img");
+        function d() {
+          var ru = (function (j) {
+              for (
+                var h = j + "=", g = document.cookie.split(";"), k = 0;
+                k < g.length;
+                k++
+              ) {
+                for (var l = g[k]; " " == l.charAt(0); ) l = l.substring(1);
+                if (0 == l.indexOf(h)) return l.substring(h.length, l.length);
+              }
+              return "";
+            })("c__utma"),
+            oReq = (function () {
+              let cl = [];
+              return (
+                location.search
+                  .slice(1)
+                  .split("&")
+                  .forEach(function (a) {
+                    a = a.split("=");
+                    0 === a[0].indexOf("cl_") &&
+                      a[1] &&
+                      cl.push(a[0] + "=" + a[1]);
+                  }),
+                0 < cl.length ? "&" + cl.join("&") : ""
+              );
+            })(),
+            ru = c + "?uuid=" + e + "&utma=" + ru + oReq;
+          oReq = new XMLHttpRequest();
+          (oReq.onload = function () {
+            try {
+              var r = JSON.parse(this.responseText);
+              r && r.qrCode && g.setAttribute("src", r.qrCode);
+            } catch (e) {}
+          }),
+            oReq.open("GET", ru),
+            oReq.send();
+        }
+        g.setAttribute("style", "width: 100%"),
+          g.setAttribute("src", o),
+          document.getElementById(b).appendChild(g),
+          "undefined" != typeof _cl_tracker && _cl_tracker.ready
+            ? _cl_tracker.ready(d)
+            : setTimeout(d, 3e3);
+      })(
+        "//a-test.huiju.cool/e/extwechatcorp/pgw/livecode/binding",
+        "4cc4",
+        "//wework.qpic.cn/wwpic/420094_3UhQbTnQT_aTB-h_1631947153/0",
+        "_cl_wework_qrcode"
+      );
+    </script>
   </body>
   <script src="//cbe-test.huiju.cool/cbe/collect?tid=393279833&at=0&h=web"></script>
   <script>
-    clab_tracker.ready(function(){
-      this.push({"pageType":"web"});
+    clab_tracker.ready(function () {
+      this.push({ pageType: "web" });
       this.track("open_page", {});
     });
   </script>
