@@ -11,7 +11,7 @@
 <body>
     <script src="https://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
    
-    <form data-cl-attached="false" data-cl-id="c6718082583944d78fe304bb49d38914">
+    <form data-cl-attached="false" data-cl-id="06e4cbe04308470885e2f284ed05a5ec">
         姓名:<input type="text" name="name"/>
         手机号:<input type="tel" name="mobile" id="clMobileField">
 	生日:<input type="Date" name="birthday"/>
@@ -31,7 +31,7 @@
         var utmaVal = document.getElementsByName("cl_context")[0].value
         var resData = data.split("&cl_context")[0] + "&" + utmaVal
         console.log("resData is",resData)
-        $.post("//a-lts.convertwork.cn/h/page/c6718082583944d78fe304bb49d38914",resData,
+        $.post("//a-lts.convertwork.cn/h/page/06e4cbe04308470885e2f284ed05a5ec",resData,
           function(data,status){
             alert("数据: \n" + data + "\n状态: " + status);
           })
