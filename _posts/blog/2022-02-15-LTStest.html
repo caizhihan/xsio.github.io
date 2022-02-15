@@ -31,7 +31,7 @@
         var utmaVal = document.getElementsByName("cl_context")[0].value
         var resData = data.split("&cl_context")[0] + "&" + utmaVal
         console.log("resData is",resData)
-        $.post("https://a-lts.convertwork.cn/h/page/1238467299/fcabac532eb34c4f8d5fa68e82bc49a5",resData,
+        $.post("https://host.dmhub.cn/page/71a7a3b6fa304473b3725036bafd14bf",resData,
           function(data,status){
             alert("数据: \n" + data + "\n状态: " + status);
           })
@@ -39,7 +39,7 @@
     </script>
 </body>
   
-       <script src="https://a-lts.convertwork.cn/cbe/collect?tid=1238467299&at=0&h=web"></script>
+       <script src="//a-lts.convertwork.cn/cbe/collect?tid=1238467299&at=0&h=web"></script>
       <script>
         clab_tracker.ready(function(){
           this.push({"pageType":"web"});
