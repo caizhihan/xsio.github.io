@@ -1,0 +1,51 @@
+<!-- LTS环境  外部网站提交表单 （含四个自定义属性） 2022-02-15日-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>master环境表单集成测试</title>
+</head>
+<body>
+    <script src="https://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+   
+    <form data-cl-attached="false" data-cl-id="71a7a3b6fa304473b3725036bafd14bf">
+        姓名:<input type="text" name="name"/>
+        手机号:<input type="tel" name="mobile" id="clMobileField">
+	      生日:<input type="Date" name="birthday"/>
+	      文本-误删:<input type="Text" name="attr50"/>
+        数值-误删:<input type="Number" name="attr51"/>
+        日期-误删:<input type="Date" name="attr52"/>
+        时间-误删:<input type="datetime-local" name="attr53"/>
+
+	cltoken:<input type="text" name="cltoken"/>
+        <input type="submit" name="" value="提交"/>
+    </form>
+	
+    <script>
+      $('form').submit(function(e) {
+        e.preventDefault();
+        var data = $(this).serialize()
+        var utmaVal = document.getElementsByName("cl_context")[0].value
+        var resData = data.split("&cl_context")[0] + "&" + utmaVal
+        console.log("resData is",resData)
+        $.post("https://a-lts.convertwork.cn/h/page/1238467299/fcabac532eb34c4f8d5fa68e82bc49a5",resData,
+          function(data,status){
+            alert("数据: \n" + data + "\n状态: " + status);
+          })
+      });
+    </script>
+</body>
+  
+       <script src="https://a-lts.convertwork.cn/cbe/collect?tid=1238467299&at=0&h=web"></script>
+      <script>
+        clab_tracker.ready(function(){
+          this.push({"pageType":"web"});
+          this.track("open_page", {});
+        });
+       
+      </script>
+    
+</html>
